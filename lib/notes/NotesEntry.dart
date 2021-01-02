@@ -13,11 +13,9 @@ class NotesEntry extends StatelessWidget {
 
   NotesEntry() {
     _titleEditingController.addListener(() {
-
       notesModel.entityBeingEdited.title = _titleEditingController.text;
     });
     _contentEditingController.addListener(() {
-
       notesModel.entityBeingEdited.content = _contentEditingController.text;
     });
   }
@@ -135,7 +133,7 @@ class NotesEntry extends StatelessWidget {
                                     Border.all(
                                         width: 6,
                                         color: notesModel.color == "green"
-                                            ? Colors.red
+                                            ? Colors.green
                                             : Theme.of(inContext).canvasColor)),
                           ),
                           onTap: () {
@@ -152,7 +150,7 @@ class NotesEntry extends StatelessWidget {
                                     Border.all(
                                         width: 6,
                                         color: notesModel.color == "blue"
-                                            ? Colors.red
+                                            ? Colors.blue
                                             : Theme.of(inContext).canvasColor)),
                           ),
                           onTap: () {

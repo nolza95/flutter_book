@@ -18,7 +18,7 @@ class Notes extends StatelessWidget {
         child: ScopedModelDescendant<NotesModel>(builder:
             (BuildContext inContext, Widget inChild, NotesModel inModel) {
           return IndexedStack(
-            index: inModel.stackIndex,
+            index: notesModel.stackIndex,
             children: [NotesList(), NotesEntry()],
           );
         }));
