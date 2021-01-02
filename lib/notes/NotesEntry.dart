@@ -13,17 +13,19 @@ class NotesEntry extends StatelessWidget {
 
   NotesEntry() {
     _titleEditingController.addListener(() {
+
       notesModel.entityBeingEdited.title = _titleEditingController.text;
     });
     _contentEditingController.addListener(() {
+
       notesModel.entityBeingEdited.content = _contentEditingController.text;
     });
   }
 
   @override
   Widget build(BuildContext inContext) {
-    _titleEditingController.text = notesModel.entityBeingEdited.title;
-    _contentEditingController.text = notesModel.entityBeingEdited.content;
+    _titleEditingController.text = notesModel.entityBeingEdited?.title;
+    _contentEditingController.text = notesModel.entityBeingEdited?.content;
 
     void _save(BuildContext inContext, NotesModel inModel) async {
       if (!_formKey.currentState.validate()) {
